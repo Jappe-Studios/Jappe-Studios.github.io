@@ -82,7 +82,8 @@
 .sec-home {
   display: flex;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 50px;
+  width: 1300px;
 }
 
 .sec-home-content {
