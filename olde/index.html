@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Tag Example</title>
+</head>
+<body>
+    <div id="custom-tag">This content will be replaced.<button>Hi!</button></div>
+
+    <script>
+        // Find the custom tag element by its ID
+        var customTag = document.getElementById('custom-tag');
+
+        // Create new HTML content
+        var newContent = document.createElement('div');
+        newContent.innerHTML = '<p>This is the replaced content.</p>' + customTag.innerHTML;
+
+        // Replace the custom tag with the new content
+        customTag.parentNode.replaceChild(newContent, customTag);
+    </script>
+</body>
+</html>
