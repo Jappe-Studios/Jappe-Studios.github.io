@@ -15,8 +15,8 @@ newContent.innerHTML = `
 <header class="header">
   <a href="#" class="logo">Jappe Studios</a>
   <nav class="navbar">
-    <a href="#" ${customTag.id == "global-site-base(home)" ? 'class="active"' : ""}>Home</a>
-    <a href="#" ${customTag.id == "global-site-base(prjs)" ? 'class="active"' : ""}>Projects</a>
+    <a href="/home/home.html" ${customTag.id == "global-site-base(home)" ? 'class="active"' : ""}>Home</a>
+    <a href="/projects/projects.html" ${customTag.id == "global-site-base(prjs)" ? 'class="active"' : ""}>Projects</a>
     <a href="#" ${customTag.id == "global-site-base(cntc)" ? 'class="active"' : ""}>Contact</a>
     <a href="#" ${customTag.id == "global-site-base(scil)" ? 'class="active"' : ""}>Socials</a>
     <a href="#" ${customTag.id == "global-site-base(abt)" ? 'class="active"' : ""}>About</a>
