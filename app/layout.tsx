@@ -27,7 +27,7 @@ import {
 } from '@ant-design/icons';
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import SubMenu from 'antd/es/menu/SubMenu';
-import { defaultPagePaddingHorizontal, discordLink, githubLink, primaryColor } from './constants';
+import { discordLink, githubLink, pagePaddingHoriz, primaryColor } from './constants';
 import { usePathname } from 'next/navigation';
 import ResizeObserver from 'resize-observer-polyfill';
 import Paragraph from 'antd/es/typography/Paragraph';
@@ -164,13 +164,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
-                  padding: `0 ${defaultPagePaddingHorizontal}px`,
+                  padding: `0 ${pagePaddingHoriz}px`,
                   transition: 'background-color 0.3s, backdrop-filter 0.3s',
                   backgroundColor: 'transparent',
                 }}
               >
-                <div style={{ fontSize: '24px', fontWeight: 'bold' }}>
-                  <Link href={'/'} style={{ color: primaryColor }}>Jappe Studios</Link>
+                <div style={{ fontSize: '24px', fontWeight: 'bold', lineHeight: '27px', }}>
+                  <Link href={'/'} style={{ color: primaryColor, margin: 0 }}>Jappe Studios</Link>
                 </div>
 
                 <div
@@ -276,10 +276,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <center>
                 <Content style={{
                   marginTop: isHomePage ? '0' : '64px',
-                  padding: isHomePage ? '0' : `0 ${defaultPagePaddingHorizontal}px`,
+                  padding: isHomePage ? '0' : `0 ${pagePaddingHoriz}px`,
                   display: 'flex',
                   flexDirection: 'column',
-                  maxWidth: '1500px',
+                  maxWidth: isHomePage ? undefined : '1500px',
                   height: '100%',
                   textAlign: 'left',
                 }}>

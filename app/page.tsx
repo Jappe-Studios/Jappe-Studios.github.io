@@ -10,6 +10,7 @@ export default function Home() {
   const texts = ["Free and Open Source Projects", "JappeOS: A Free and Open Source Operating System", "High-Quality Games and Apps!", "Lightweight Tools for Developers", "Public Discord Server"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFadingOut, setIsFadingOut] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -25,6 +26,24 @@ export default function Home() {
 
     return () => clearInterval(intervalId); // Clean up the interval on component unmount
   }, [texts.length]);
+
+  useEffect(() => {
+    // Check the window width only on the client
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 607);
+    };
+
+    // Initial check
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', }}>
@@ -52,8 +71,8 @@ export default function Home() {
         }}
       >
         
-        <Paragraph style={{ fontSize: 75, fontWeight: 'bold', margin: '7px', color: primaryColor, }}>Jappe Studios</Paragraph>
-        <Paragraph style={{ fontSize: 20, fontWeight: 'bold', margin: 0, }} className={`changing-text ${isFadingOut ? 'fade-out' : 'fade-in'}`}>{texts[currentIndex]}</Paragraph>
+        <Paragraph style={{ fontSize: isMobile ? 50 : 75, fontWeight: 'bold', margin: '7px', color: primaryColor, }}>Jappe Studios</Paragraph>
+        <Paragraph style={{ fontSize: isMobile ? 14 : 20, fontWeight: 'bold', margin: 0, }} className={`changing-text ${isFadingOut ? 'fade-out' : 'fade-in'}`}>{texts[currentIndex]}</Paragraph>
       </div>
       <div>
         <center>

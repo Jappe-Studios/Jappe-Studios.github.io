@@ -4,4 +4,4 @@ export const youtubeLink = "";
 
 export const primaryColor = '#8437cc';
 
-export const defaultPagePaddingHorizontal = 50;
+export const pagePaddingHoriz = 25;

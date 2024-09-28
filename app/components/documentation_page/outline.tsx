@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState, useRef, MouseEventHandler } from 'react';
 import { Anchor, FloatButton } from 'antd';
-import { defaultPagePaddingHorizontal } from '@/app/constants';
 import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons';
+import { pagePaddingHoriz } from '@/app/constants';
 
 interface OutlineProps {
   content: string;
@@ -89,7 +89,7 @@ const Outline: React.FC<OutlineProps> = ({ content, isOutlineVisible, toggleOutl
         position: 'fixed',
         width: 250,
         top: 70,
-        right: defaultPagePaddingHorizontal,
+        right: pagePaddingHoriz,
         maxHeight: 'calc(100vh - 70px)',
         overflowY: 'auto',
         padding: '10px',
@@ -114,7 +114,7 @@ const Outline: React.FC<OutlineProps> = ({ content, isOutlineVisible, toggleOutl
           style={{
             position: 'fixed',
             top: 70,
-            right: defaultPagePaddingHorizontal + (isOutlineVisible ? 250 : 0),
+            right: pagePaddingHoriz + (isOutlineVisible ? 250 : 0),
             overflowY: 'auto',
             padding: '10px',
           }}
