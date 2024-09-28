@@ -8,7 +8,7 @@ const CommunityGuidelines = () => {
 
   useEffect(() => {
     const loadContent = async () => {
-      const response = await fetch('/jappe-studios/community_guidelines/content.html');
+      const response = await fetch('/community_guidelines/content.html');
       if (response.ok) {
         const content = await response.text();
         setHtmlContent(content); // Update state with fetched content

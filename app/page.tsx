@@ -32,7 +32,7 @@ export default function Home() {
         style={{
           width: '100vw', // Full viewport width
           height: '100vh', // Full viewport height
-          backgroundImage: `url('/jappe-studios/home_background.png')`,
+          backgroundImage: `url('/home_background.png')`,
           backgroundSize: 'cover', // Ensures the image covers the entire area
           backgroundPosition: 'center', // Centers the image
           top: 0,
