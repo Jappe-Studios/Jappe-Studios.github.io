@@ -1,0 +1,12 @@
+.custom-tree .ant-tree {
+    border-radius: 8px !important;
+  background-color: transparent !important; /* Force background to be transparent */
+}
+
+.custom-tree .ant-tree-treenode {
+  background-color: transparent !important;
+}
+
+.custom-tree .ant-tree-node-content-wrapper {
+  background-color: transparent !important;
+}

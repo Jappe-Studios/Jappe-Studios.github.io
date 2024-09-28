@@ -1,0 +1,14 @@
+.blockquote {
+    border-left: 4px solid #ccc; /* Change the border color */
+    padding: 10px 20px;          /* Add padding for the quote */
+    margin: 10px 0;              /* Add margin for spacing */
+    font-style: italic;           /* Italic text */
+}
+
+.list {
+    padding-left: 20px;           /* Indentation of bullet points */
+}
+
+.listItem {
+    margin-bottom: 10px;          /* Spacing between bullet points */
+}

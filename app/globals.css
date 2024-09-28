@@ -1,0 +1,88 @@
+html, body {
+  height: 100%; /* Ensure the html and body take up the full height of the viewport */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #090909; /* Set the background color of the body to match the dark theme */
+}
+
+#root {
+  flex-grow: 1; /* The root div or container that holds the page content */
+}
+
+.highlighted-content {
+  background-color: rgba(255, 255, 255, 0.033);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Initial header style */
+.header {
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Header style when scrolled */
+.header.scrolled {
+  background-color: rgba(17, 17, 17, 0.746); /* Semi-transparent dark background */
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.537); /* Shadow for depth */
+}
+
+/* Custom styling for the site layout content */
+.site-layout-content {
+  padding: 24px;
+  color: white;
+}
+
+/* General menu item styling */
+.custom-menu .ant-menu-item,
+.custom-menu .ant-menu-submenu-title,
+.custom-menu .ant-menu-submenu {
+  padding: 0 12px !important; /* Ensure consistent padding */
+  height: 40px; /* Height for all items */
+  line-height: 40px; /* Center text vertically */
+  border-radius: 8px; /* Rounded corners */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Vertically center text */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Ensure dropdown panel has rounded corners */
+.custom-menu .ant-menu-sub {
+  border-radius: 8px !important; /* Apply border-radius to the dropdown panel */
+}
+
+/* Ensure submenu items have same padding */
+.custom-menu .ant-menu-submenu .ant-menu-item {
+  padding: 0 12px !important; /* Ensure submenu items have same padding */
+  border-radius: 8px !important; /* Rounded corners for submenu items */
+}
+
+/* Hover effect for menu items */
+.custom-menu .ant-menu-item:hover,
+.custom-menu .ant-menu-submenu-title:hover,
+.custom-menu .ant-menu-submenu:hover .ant-menu-item {
+  background-color: rgba(255, 255, 255, 0.1); /* Add hover effect */
+}
+
+/* Apply consistent styles to all states */
+.custom-menu .ant-menu-item,
+.custom-menu .ant-menu-submenu {
+  padding: 0 12px !important; /* Ensure consistent padding */
+  background-color: transparent; /* Keep background transparent */
+  border-radius: 8px !important; /* Ensure border-radius is applied all the time */
+}
+
+.custom-menu .ant-menu-submenu-title {
+  padding: 0 !important;
+}
