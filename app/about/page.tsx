@@ -5,6 +5,14 @@ import { Typography, Row, Col, Button } from 'antd';
 import Link from 'next/link';
 import { discordLink } from '../constants';
 import AboutPageLayout from '../components/about_page_layout';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Jappe Studios - About Us',
+  description: `Jappe Studios is a small team dedicated to creating innovative games and applications.
+        Our passion for gaming and technology drives us to develop engaging experiences for users.
+        Most of our projects are open source, allowing others to learn from and contribute to our work.`,
+}
 
 const { Title, Paragraph } = Typography;
 
