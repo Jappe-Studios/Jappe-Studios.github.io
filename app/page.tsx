@@ -2,15 +2,9 @@
 
 import './changing_text.css';
 import React, { useState, useEffect } from 'react';
-import { Metadata } from 'next'
 import { Layout } from "antd";
 import Paragraph from "antd/es/typography/Paragraph";
 import { primaryColor } from './constants';
-
-export const metadata: Metadata = {
-  title: 'Jappe Studios',
-  description: 'An open-source friendly organization that makes games, apps, and more! We also have a public Discord server where you can get support with any of our projects/products, or just hang out!',
-}
 
 export default function Home() {
   const texts = ["Free and Open Source Projects", "JappeOS: A Free and Open Source Operating System", "High-Quality Games and Apps!", "Lightweight Tools for Developers", "Public Discord Server"];

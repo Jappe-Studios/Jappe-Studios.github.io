@@ -2,12 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import DocumentationLayout from '../components/documentation_page/documentation_page_layout';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Jappe Studios - Community Guidelines',
-  description: 'Community guidelines/rules for all official Jappe Studios communities.',
-}
 
 const CommunityGuidelines = () => {
   const [htmlContent, setHtmlContent] = useState<string>(""); // State to hold the HTML content

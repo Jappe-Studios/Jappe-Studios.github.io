@@ -3,12 +3,6 @@
 import React from 'react';
 import { Typography } from 'antd';
 import AboutPageLayout from '../components/about_page_layout';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Jappe Studios - Contact',
-  description: 'You can contact us using our email address, or via our Discord server (recommended).',
-}
 
 const { Paragraph } = Typography;
 
