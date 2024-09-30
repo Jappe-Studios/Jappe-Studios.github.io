@@ -3,7 +3,7 @@
 import React from 'react';
 import { Typography, Row, Col, Button } from 'antd';
 import Link from 'next/link';
-import { discordLink } from '../constants';
+import { discordLink, githubLink } from '../constants';
 import AboutPageLayout from '../components/about_page_layout';
 
 const { Title, Paragraph } = Typography;
@@ -33,11 +33,9 @@ const About = () => {
 
       <Row gutter={16} style={{ marginTop: '20px' }}>
         <Col span={12}>
-          <Link href="/projects">
-            <Button type="primary" block>
-              View Our Projects
-            </Button>
-          </Link>
+          <Button type="primary" block onClick={() => window.open(githubLink, '_blank')}>
+            View Our Github
+          </Button>
         </Col>
         <Col span={12}>
           <Button type="default" block onClick={() => window.open(discordLink, '_blank')}>
