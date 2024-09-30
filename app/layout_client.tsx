@@ -56,21 +56,6 @@ const LayoutClient = ({ children }: { children: ReactNode }) => {
   const menuItems: MenuItem[] = useMemo(
     () => [
       { key: '1', label: <Link href="/">Home</Link> },
-      { key: '2', label: <Link href="/">Jappe OS</Link> },
-      {
-        key: '3',
-        label: 'Apps & Tools',
-        children: [
-          { key: '3-1', label: <Link href="/">coming soon</Link> },
-        ],
-      },
-      {
-        key: '4',
-        label: 'Games',
-        children: [
-          { key: '4-1', label: <Link href="/product/stranded_survival">Stranded Survival</Link> },
-        ],
-      },
       { key: '5', label: <Link href="/about">About</Link> },
       { key: '6', label: <Link href="/contact">Contact</Link> },
     ],
@@ -110,9 +95,6 @@ const LayoutClient = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (pathname === '/') {
       setSelectedKey('1');
-      setOpenKeys([]);
-    } else if (pathname.startsWith('/product/stranded_survival')) {
-      setSelectedKey('4-1');
       setOpenKeys([]);
     } else if (pathname.startsWith('/about')) {
       setSelectedKey('5');
