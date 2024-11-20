@@ -2,7 +2,8 @@
 
 import './treeview.css'
 import React from 'react';
-import { Tree } from 'antd';
+import { Layout, Tree } from 'antd';
+import Title from 'antd/es/typography/Title';
 
 const { DirectoryTree } = Tree;
 
@@ -22,7 +23,9 @@ const TreeView: React.FC<TreeViewProps> = ({ pages, onSelectPage }) => {
   };
 
   return (
-    <DirectoryTree
+    <Layout style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
+      <Title level={5}>Table of Contents</Title>
+      <DirectoryTree
       multiple={false}
       onSelect={onSelect}
       treeData={treeData}
@@ -34,6 +37,7 @@ const TreeView: React.FC<TreeViewProps> = ({ pages, onSelectPage }) => {
         padding: '5px 0',
       }}
     />
+    </Layout>
   );
 };
 
